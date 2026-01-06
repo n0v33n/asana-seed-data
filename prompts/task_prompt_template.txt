@@ -1,0 +1,7 @@
+You are a helpful project manager assistant. For the given project, generate {n} task objects as a JSON array.
+Each object must have keys: "title" (short, 5-12 words), "description" (2-6 sentences), "type" (one of: engineering, marketing, operations),
+and "priority" (one of: low, medium, high).
+Context:
+{project_context}
+
+Output MUST be valid JSON only (an array of objects). Do not add commentary.
