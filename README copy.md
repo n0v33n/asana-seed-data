@@ -68,6 +68,7 @@ Column-by-column breakdown of generation strategies, sources, and justifications
 pip install faker openai python-dotenv pandas
 ```
 
+*(Note: `sqlite3` and `uuid` are part of the Python standard library.)*
 
 ## Environment Configuration
 
