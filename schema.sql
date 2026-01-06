@@ -62,12 +62,14 @@ CREATE TABLE tasks (
 
 CREATE TABLE tags (
     id TEXT PRIMARY KEY,
-    name TEXT UNIQUE
+    name TEXT UNIQUE NOT NULL,
+    color TEXT,
+    created_at TIMESTAMP
 );
 
 CREATE TABLE task_tags (
-    task_id TEXT,
-    tag_id TEXT,
+    task_id TEXT NOT NULL,
+    tag_id TEXT NOT NULL,
     PRIMARY KEY (task_id, tag_id),
     FOREIGN KEY (task_id) REFERENCES tasks(id),
     FOREIGN KEY (tag_id) REFERENCES tags(id)

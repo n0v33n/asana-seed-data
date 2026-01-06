@@ -1,3 +1,6 @@
 .env
 __pycache__/
 *.pyc
+src/__pycache__/main.cpython-312.pyc
+src/generators/__pycache__/projects.cpython-312.pyc
+src/generators/__pycache__/tasks.cpython-312.pyc

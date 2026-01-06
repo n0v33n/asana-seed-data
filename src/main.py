@@ -6,8 +6,10 @@ from src.generators.users import generate_users
 from src.generators.projects import generate_projects
 from src.generators.sections import generate_sections
 from src.generators.tasks import generate_tasks
-from src.generators.tags import populate_tags
+# from src.generators.tags import populate_tags
 from src.generators.comments import generate_comments
+from src.generators.tags import generate_tags
+from src.generators.task_tags import generate_task_tags
 
 def main():
     db_path = CONFIG["DB_PATH"] or "output/asana_simulation.sqlite"
@@ -39,14 +41,17 @@ def main():
     section_map = generate_sections(conn, projects)
     # tags
     print("Populating tags...")
-    tag_map = populate_tags(conn)
+    # tag_map = populate_tags(conn)
     # tasks (this uses LLM if configured)
     print("Generating tasks (this may use OpenAI) ...")
     task_ids = generate_tasks(conn, projects, users, section_map)
     # comments
     print("Generating comments...")
     generate_comments(conn, task_ids, users)
-
+    # 1. Generate tags (global)
+    tag_map = generate_tags(conn)
+    # 2. Generate task-tag relationships
+    generate_task_tags(conn, task_ids, tag_map)
     conn.commit()
     conn.close()
     print("✅ Asana simulation database created successfully.")
