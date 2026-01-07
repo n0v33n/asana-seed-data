@@ -1,0 +1,2 @@
+*.csv filter=lfs diff=lfs merge=lfs -text
+tocsv/csv/tasks.csv filter=lfs diff=lfs merge=lfs -text

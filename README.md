@@ -14,6 +14,23 @@ The schema and data generation are designed to closely mirror real Asana data st
 
 This makes the dataset particularly suitable for training and evaluating reinforcement learning (RL) agents in complex, multi-step enterprise workflows, without exploitable artifacts or shortcuts.
 
+### Published Dataset
+
+The generated dataset is publicly available on Kaggle:
+
+🔗 **Asana Enterprise Workspace Simulation Dataset**  
+<https://www.kaggle.com/datasets/dnkumars/asana-enterprise-workspace-simulation-dataset/data>
+
+The Kaggle release includes:
+
+- `finaldb.sqlite` (authoritative relational database)
+- CSV exports for each table (for visibility and EDA)
+- Dataset documentation and provenance details
+
+### Motivation
+
+Real-world Asana data is proprietary and inaccessible. This project provides a high-fidelity, ethically generated alternative that avoids simplistic synthetic artifacts while enabling meaningful evaluation of AI agents in enterprise settings.
+
 ## Key Features
 
 - **Realism Grounded in Real-World Sources**: Names, distributions, and patterns derived from public data (e.g., Crunchbase, GitHub issues, Asana reports).
