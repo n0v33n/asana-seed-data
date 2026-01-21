@@ -40,6 +40,7 @@ Real-world Asana data is proprietary and inaccessible. This project provides a h
 
 ## ER Diagram Reference
 
+![ER Diagram1](Erdia.jpeg)
 ![ER Diagram](dberdiagram.png)
 
 *(An ER diagram visualizing relationships between organizations, teams, users, projects, sections, tasks, comments, custom fields, and tags.)*
